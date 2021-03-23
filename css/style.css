@@ -1,0 +1,879 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style-type: none;
+}
+.clr{
+    clear: both;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+/*========================preloder css part goes here==============================*/
+.preloder{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: hotpink;
+    z-index: 9999;
+}
+.load{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    /*change these sizes to fit into your project*/
+    width:100px;
+    height:100px;
+  }
+  .load hr{
+      border:0;margin:0;
+      width:40%;
+      height:40%;
+      position:absolute;
+      border-radius:50%;
+      animation:spin 2s ease infinite
+    }
+  
+  .load :first-child{background:#19A68C;animation-delay:-1.5s}
+  .load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+  .load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+  .load :last-child{background:#193B48}
+  
+  @keyframes spin{
+    0%,100%{transform:translate(0)}
+    25%{transform:translate(160%)}
+    50%{transform:translate(160%, 160%)}
+    75%{transform:translate(0, 160%)}
+  }
+/*========================preloder css part goes here==============================*/
+/*========================Navbar css part goes here==============================*/
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: all linear .4s;
+}
+.bg{
+    background-color: hotpink;
+    animation: bg 1s;
+}
+@keyframes{
+    from{top:-70px;}
+    to{top:0;}
+}
+.menu-main{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 200px;
+}
+.logo img{
+    padding-top: 37px;
+}
+.menu{
+    width: 530px;
+    text-align: right;
+}
+.menu ul li{
+    display: inline-block;
+}
+.menu ul li a{
+    padding-left: 27px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    text-transform: capitalize;
+    line-height: 92px;
+    position: relative;
+    transition: all linear .5s;
+}
+.menu ul li a:hover{
+    color: #d50a51;
+}
+.menu ul li a::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    background-image: url(../images/after.png);
+    top: 126%;
+    left: 13px;
+    opacity: 0;
+    transition: all linear .5s;
+}
+.menu ul li a:hover::after{
+    opacity: 1;
+    width: 100%;
+}
+.search-bar{
+    width: 300px;
+    line-height: 92px;
+    text-align: right;
+}
+.search-bar a{
+    width: 203px;
+    height: 49px;
+    background-color: #d50a51;
+    padding: 15px 21px 15px 21px;
+    border-radius: 49px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+.bg .logo img{
+    padding-top: 17px;
+    transition: all linear .4s;
+}
+.bg .menu ul li a{
+    line-height: 60px;
+    transition: all linear .4s;
+}
+.bg .search-bar{
+    line-height: 60px;
+    transition: all linear .4s;
+}
+/*========================Navbar css part end here==============================*/
+/*========================banner css part goes here==============================*/
+#banner{
+    background-image: linear-gradient(to right, #fef5f9,#ffffff , #fef5f9);
+    position: relative;
+}
+.banner-main{
+    display: flex;
+    justify-content: space-between;
+}
+.banner-img{
+    position: relative;
+    left: -3%;
+    padding-top: 131px;
+    width: 620px;
+}
+.banner-text{
+    width: 570px;
+    text-align: center;
+}
+.banner-text h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 61px;
+    color: #8a5e3b;
+    text-transform: uppercase;
+    padding-top: 222px;
+}
+.banner-text h1{
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    font-size: 84px;
+    color: #d50a51;
+    margin-top: -32px;
+    padding-bottom: 18px;
+}
+.banner-text p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+}
+.banner-btn{
+    padding-top: 75px;
+}
+.banner-btn a{
+    padding: 16px 20px 12px 20px;
+    border: 1px solid #d50a51;
+    border-radius: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #d50a51;
+    text-transform: capitalize;
+    transition: all linear .5s;
+    margin-right: 15px;
+}
+.banner-btn a:hover{
+    background-color: #d50a51;
+    color: #ffffff;
+}
+/*========================banner css part end here==============================*/
+/*========================history css part goes here==============================*/
+.history-main{
+    padding-top: 100px;
+    padding-bottom: 86px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.history-img{
+    width: 555px;
+}
+
+.history-text{
+    width: 570px;
+}
+.history-text p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-top: 51px;
+}
+.history-text .text2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-top: 32px;
+}
+
+/*========================history css part end here==============================*/
+/*========================proposal css part goes here==============================*/
+#gift{
+    background-color: #fff8df;
+}
+.proposal-overlay{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.proposal{
+    height: 500px;
+    display: flex;
+}
+.proposal-text{
+    width: 570px;
+    padding-top: 56px;
+}
+.proposal-text p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-top: 46px;
+}
+.proposal-text .text2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
+.proposal-img{
+    position: absolute;
+    bottom: -43px;
+    right: 7%;   
+}
+.proposal-img img{
+    width: 700px;
+    height: 745px;
+}
+.proposal-btn{
+    padding-bottom: 72px;
+}
+.pro1 {
+    padding: 16px 20px 12px 20px;
+    border-radius: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    transition: all linear .5s;
+    margin-right: 15px;
+    background-color: #d50a51 ;
+}
+.pro1:hover{
+    border: 1px solid #d50a51;
+    color: #d50a51;
+    background-color: transparent;
+}
+.pro2 {
+    padding: 16px 20px 12px 20px;
+    border: 1px solid #d50a51;
+    border-radius: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #d50a51;
+    text-transform: capitalize;
+    transition: all linear .5s;
+    margin-right: 15px;
+}
+
+.pro2:hover{
+    background-color: #d50a51;
+    color: #ffffff;
+}
+/*========================proposal css part end here==============================*/
+/*========================ticket css part goes here==============================*/
+.ticket-main{
+    padding-top: 87px;
+    display: flex;
+    justify-content: space-between;
+}
+.ticket-img{
+    width: 656px;
+    position: relative;
+    left: -5%;
+}
+.ticket-text{
+    width: 570px;
+    text-align: right;
+}
+.ticket-text p{
+    padding-top: 49px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+}
+.ticket-text .text2{
+    padding-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-bottom: 43px;
+}
+
+/*========================ticket css part end here==============================*/
+/*========================service css part goes here==============================*/
+#service{
+    background-color: #fef7fa;
+}
+.service-main{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 65px;
+    padding-bottom: 100px;
+}
+.service-left{
+    width: 370px;
+}
+.service-left p{
+    padding-top: 49px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+}
+.service-left  .text2{
+    padding-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444
+}
+.service-main1{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.service-item{
+    width: 370px;
+    transition: all linear .3s; 
+}
+.service-item:hover{
+    
+    border-right: 3px solid #d50a51;
+    background-color: #f1f1f1;
+    box-shadow: -1px -1px 5px rgba(0, 0, 0,.2),1px 0px 5px rgba(0, 0, 0,.2);
+}
+.service-head{
+    display: flex;
+
+}
+.service-icon{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.service-head h4{
+    padding-top: 64px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #d50a51;
+    padding-left: 22px;
+}
+.service-item p{
+    padding-top: 11px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding: 15px 28px 24px 30px;
+}
+/*========================service css part end here==============================*/
+/*========================gallrey css part goes here==============================*/
+.gallrey-main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-bottom: 66px;
+}
+.gallrey-left{
+    width: 770px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.gallrey-item{
+    width: 370px;
+    position: relative;
+    margin-bottom: 30px;
+    line-height: 0;
+}
+
+.gallrey-overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0,.80);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: all linear .5s;
+}
+.gallrey-item:hover .gallrey-overlay{
+    opacity: 1;
+    height: 100%;
+}
+.gallrey-icon{
+    position: absolute;
+    right: 0;
+    width: 70px;
+    text-align: center;
+}
+.gallrey-icon i{
+    border: 1px solid #ffffff;
+    width: 40px;
+    height: 40px;border-radius: 40px;
+    line-height: 40px;
+    font-size: 17px;
+    color: #ffffff;
+    margin-top: 15px;
+    transition: all linear .5s;
+}
+.gallrey-icon i:hover{
+    background-color: #d50a51;
+    border: none;
+}
+.gallrey-text{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+.gallrey-text h5{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+}
+.gallrey-text-icon{
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 9px;
+}
+.gallrey-text-icon a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    margin-left: 10px;
+}
+.gallrey-right{
+    width: 370px;
+    text-align: right;
+}
+.gallrey-right p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-top: 51px;
+}
+.gallrey-right .text2{
+    padding-top: 32px;
+}
+.gallrey-btn{
+    padding-top: 45px;
+}
+.gal-btn1{
+    padding: 16px 20px 12px 20px;
+    border-radius: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    transition: all linear .5s;
+    margin-right: 15px;
+    background-color: #d50a51 ;
+}
+.gal-btn1:hover{
+    border: 1px solid #d50a51;
+    color: #d50a51;
+    background-color: transparent;
+}
+.gal-btn2{
+    padding: 16px 20px 12px 20px;
+    border: 1px solid #d50a51;
+    border-radius: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #d50a51;
+    text-transform: capitalize;
+    transition: all linear .5s;
+    margin-right: 15px;
+}
+
+.gal-btn2:hover{
+    background-color: #d50a51;
+    color: #ffffff;
+}
+/*========================gallrey css part end here==============================*/
+/*========================funfact css part goes here==============================*/
+#funfact{
+    background-image: url(../images/funfact1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+.funfact-main{
+    display: flex;
+    justify-content: space-around;
+}
+.funfact-item{
+    width: 130px;
+    text-align: center;
+    
+}
+.funfact-item h4{
+    padding-top: 93px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #d50a51;
+    text-transform: uppercase;
+}
+.funfact-item p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #444444;
+    text-transform: capitalize;
+    margin-top: -15px;
+}
+/*========================funfact css part end here==============================*/
+/*========================contact css part goes here==============================*/
+.contact-main{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 133px;
+    padding-bottom: 154px;
+    position: relative;
+}
+.contact-left-img{
+    position: absolute;
+    left: -39px;
+    top: 91px;
+}
+.contact-right-img{
+    position: absolute;
+    right: -38px;
+    bottom: 111px;
+}
+.contact-icon{
+    position: relative;
+    align-self: center;
+}
+.contact-icon .left{
+    position: absolute;
+    left: -636px;
+    top: 0px;
+    font-size: 18px;
+    color: #d50a51;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d50a51;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 40px;
+    transition: all linear .5s;
+}
+.contact-icon .left:hover{
+    color: #ffffff;
+    background-color: #d50a51;
+    border: none;
+}
+.contact-icon .right{
+    position: relative;
+    right: -636px;
+    top: 0;
+    font-size: 18px;
+    color: #d50a51;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d50a51;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 40px;
+    transition: all linear .5s;
+}
+.contact-icon .right:hover{
+    color: #ffffff;
+    background-color: #d50a51;
+    border: none;
+}
+.contact-item{
+    width: 575px;
+    background-color: #fffae2;
+    transition: all linear .4s;
+}
+.contact-item:hover{
+    box-shadow: -1px -1px 2px rgba(0, 0, 0,.15), 1px 1px 2px rgba(0, 0, 0,.15);
+}
+.contact-item p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-top: 41px;
+    padding-left: 32px;
+    padding-right: 20px;
+}
+.contact-img{
+    display: flex;
+    padding-left: 32px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.contact-text{
+    padding-top: 29px;
+    padding-left: 22px;
+}
+.contact-text h5{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #222222;
+    text-transform: capitalize;
+}
+.contact-text p{
+    margin-top: -42px;
+    margin-left: -33px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    text-transform: capitalize;
+}
+/*========================contact css part end here==============================*/
+/*========================footer css part goes here==============================*/
+#footer{
+    background-image: linear-gradient(to right, #fad3e4,#ffffff , #fad3e4);
+}
+.footer-head-item{
+    display: flex;
+    width: 1170px;
+    height: 112px;
+    background-color: #d50a51;
+    border-radius: 112px;
+}
+.footer-head{
+    position: relative;
+}
+.head2{
+    position: absolute;
+    top: -14%;
+}
+.footer-head-icon{
+    padding-left: 100px;
+    align-self: center;
+}
+.footer-head-icon i{
+    font-size: 50px;
+    color: #ffffff;
+}
+.footer-head-text{
+    align-self: center;
+    padding-left: 11px;
+    padding-top: 4px;
+    padding-right: 45px;
+}
+.footer-head-text h4{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.footer-head-text p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+}
+.footer-form{
+    align-self: center;
+}
+.footer-form input{
+    width: 270px;
+    padding: 12px 0px 12px 12px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    margin-right: 30px;
+    outline: none;
+}
+#email::placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+#name::placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+.footer-form i{
+    position: relative;
+    padding: 12px 12px 11px 9px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    right: 35px;
+    top: 2px;
+}
+.footer-logo{
+    text-align: center;
+    padding-top: 83px;
+}
+.footer-main{
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-item{
+    display: flex;
+    width: 260px;
+}
+.footer-icon{
+    text-align: center;
+}
+.footer-icon i{
+    width: 50px;
+    height: 50px;
+    background-color: #d50a51;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 50px;
+}
+.footer-text{
+    padding-left: 21px;
+   
+}
+.footer-text p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    line-height: 26px;
+}
+.footer-item1{
+    display: flex;
+    width: 292px;
+}
+.footer-head2{
+    text-align: center;
+    padding-top: 59px;
+}
+.footer-head2 h4{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #d50a51;
+    text-transform: capitalize;
+}
+.footer-icon2{
+    text-align: center;
+    padding-top: 23px;
+    padding-bottom: 44px;
+}
+.footer-icon2 i{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d50a51;
+    border-radius: 40px;
+    line-height: 40px;
+    color: #d50a51;
+    margin-right: 5px;
+    transition: all linear .5s;
+}
+.footer-icon2 i:hover{
+    background-color: #d50a51;
+    color: #ffffff;
+    border: none;
+}
+.copyright{
+    text-align: center;
+    height: 55px;
+    background-color: #fce1ed;
+}
+.copyright p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #444444;
+    line-height: 55px;
+}
+.copyright span{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #d50a51;
+    text-transform: uppercase;
+}
+/*========================footer css part end here==============================*/
+/*========================back-to-top css part goes here==============================*/
+.back-to-top{
+    position: fixed;
+    right: 25px;
+    bottom:25px;
+}
+.back-to-top i{
+    width: 50px;
+    height: 50px;
+    background-color: #DC3958;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 20px;
+}
+/*========================back-to-top css part end here==============================*/
+/*========================Navbar css part goes here==============================*/
+
+/*========================Navbar css part end here==============================*/
